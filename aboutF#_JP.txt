@@ -1,0 +1,13 @@
+こちらのテキストファイルではF＃の構文等々を説明していきます
+
+
+・F#について
+F#はマイクロソフトが開発した.NET Framework向けのマルチパラダイムプログラミング言語である。Visual Studio 2010より標準開発言語として追加され
+Ocamlの関数型言語やPythonの軽量構文やdotnetframeworkのクラスライブラリを使用できるなどかなり使い勝手が良いものになっています
+(参照:https://ja.wikipedia.org/wiki/F_Sharp)
+
+
+
+
+
+
