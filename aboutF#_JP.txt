@@ -6,7 +6,9 @@ F#はマイクロソフトが開発した.NET Framework向けのマルチパラ�
 Ocamlの関数型言語やPythonの軽量構文やdotnetframeworkのクラスライブラリを使用できるなどかなり使い勝手が良いものになっています
 (参照:https://ja.wikipedia.org/wiki/F_Sharp)
 
-
+実行について
+ローカル環境で実行するにはdotnet framework
+オンライン上で実行するにはTry F#(https://try.fsharp.org/)をお使いください
 
 
 
