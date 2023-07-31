@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lBIke3xFoVTpFBAMgIlfEUfvB2iD4IdKQUUs7iXXaCh9pnDjqPIfpQ9VGLotcSaUtgrdB1xRmluPODRoqmjeSw==",
+  "success": true,
+  "projectFilePath": "/home/kali/デスクトップ/F#のコード/MLP/えぬえぬ.fsproj",
+  "expectedPackageFiles": [
+    "/home/kali/.nuget/packages/fsharp.core/7.0.300/fsharp.core.7.0.300.nupkg.sha512"
+  ],
+  "logs": []
+}
