@@ -1,0 +1,58 @@
+ブロックチェーンメモ色々
+
+
+
+
+type block={
+    block_hash:string       //ブロックのハッシュ
+    height:uint64       //ブロックの高さ(何個目のブロックか)
+    is_main:bool        //メインチェーンだとtrue
+    version:uint64      //ブロックのバージョン
+    prev_block:string   //前ブロックのハッシュ
+    merkle_root:string  //マークルルートのハッシュ
+    timestamp:System.DateTime   //ブロックが作成された時の時間
+    bits:uint64     //マイニング難易度
+    nonce:uint64    //ナンス(PoW)　ここを探す！！
+    txnum:uint64    //トランザクションの数
+    total_fees:uint64   //手数料(satoshi単位)
+    tx_hashes:string[]  //ブロックに含まれるtxID配列
+
+}
+
+
+version->
+
+merkle_root->
+    tx_hashes[]を二個ずつにまとる->sha-256->二個ずつまとめる->sha-256..と1個のハッシュにする
+
+bit->難易度
+    ナンスの値をbit以下にする(小さいほど難易度高い)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
