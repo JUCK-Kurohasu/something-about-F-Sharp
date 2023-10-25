@@ -5,16 +5,21 @@ open System.Net.Http
 open System.Security.Cryptography
 open System.Text.Encodings
 
+open System.Text.Json
+open System.IO
+
 let url= @"https://chainflyer.bitflyer.com/v1/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
 let clientbox=new HttpClient()
 async{
-
    let! response=clientbox.GetAsync(url)|>Async.AwaitTask
    let content=response.Content
    let! data=content.ReadAsStringAsync()|>Async.AwaitTask
-   printfn "%s %s" url data 
+   printfn "%s %s\n\n" url data 
+   let stri=data.Split(",")
+   printfn "%s" stri[0]
 
-   
+    //let str=data.split(",")|>Async.AwaitTask
+    //printfn "%A" str
 }
 |>Async.RunSynchronously
 
@@ -61,7 +66,7 @@ type block={
 type tx={
     tx_hashes:string
     block_height:uint64
-    confirmed:
+    confirmed:int64
 
 }
 

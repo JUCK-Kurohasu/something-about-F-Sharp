@@ -17,7 +17,8 @@ type user={
 
 let message= @"num1=01,num2=02,num3=03"
 let str=message.Split(",")
-printfn "%A" str
+for i=0 to 2 do 
+   printfn "%s" str[i] 
 
 
 
