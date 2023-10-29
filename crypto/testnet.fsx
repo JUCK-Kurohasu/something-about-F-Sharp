@@ -15,13 +15,18 @@ async{
    let content=response.Content
    let! data=content.ReadAsStringAsync()|>Async.AwaitTask
    printfn "%s %s\n\n" url data 
-   let stri=data.Split(",")
-   printfn "%s" stri[0]
+   let mutable  stri=data.Split(",")
+   
+
+   for i=0 to ((stri.Length)-1) do
+    printfn "%s" stri[i]
 
     //let str=data.split(",")|>Async.AwaitTask
     //printfn "%A" str
 }
 |>Async.RunSynchronously
+printfn "end!"
+
 
 
 

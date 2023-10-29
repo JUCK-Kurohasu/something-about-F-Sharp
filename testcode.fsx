@@ -1,4 +1,5 @@
 open System
+open System.Threading
 open System.Text
 open System.Net.Security
 open System.Net.Http
@@ -11,6 +12,8 @@ type user={
    name:string
    age:int
 }
+
+
 
 
 
@@ -31,10 +34,14 @@ let json=JsonSerializer.Serialize(testuser)
 File.WriteAllText("user.json",json)
 
 
+let testtask=
+   async{
+     let! delay=task.Delay(2000)
+     printfn "hello"
+   }
 
 
-
-
+testtask()
 
 
 
