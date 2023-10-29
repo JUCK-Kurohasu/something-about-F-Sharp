@@ -36,7 +36,7 @@ File.WriteAllText("user.json",json)
 
 let testtask=
    async{
-     let! delay=task.Delay(2000)
+     task.Delay(2000)
      printfn "hello"
    }
 
