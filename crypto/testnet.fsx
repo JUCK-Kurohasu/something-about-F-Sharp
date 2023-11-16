@@ -8,6 +8,9 @@ open System.Text.Encodings
 open System.Text.Json
 open System.IO
 
+#r "nuget: FSharp.Data "
+//dotnet add package FSharp.Data --version 6.3.0
+
 let url= @"https://chainflyer.bitflyer.com/v1/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f"
 let clientbox=new HttpClient()
 async{

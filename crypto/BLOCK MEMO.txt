@@ -10,7 +10,7 @@ type block={
     version:uint64      //ブロックのバージョン
     prev_block:string   //前ブロックのハッシュ
     merkle_root:string  //マークルルートのハッシュ
-    timestamp:System.DateTime   //ブロックが作成された時の時間
+    timestamp:System.DateTime   //ブロックが作成された時の時間(unixtime)
     bits:uint64     //マイニング難易度
     nonce:uint64    //ナンス(PoW)　ここを探す！！
     txnum:uint64    //トランザクションの数

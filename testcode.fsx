@@ -15,9 +15,6 @@ type user={
 
 
 
-
-
-
 let message= @"num1=01,num2=02,num3=03"
 let str=message.Split(",")
 for i=0 to 2 do 
@@ -32,19 +29,6 @@ let testuser:user={
 
 let json=JsonSerializer.Serialize(testuser)
 File.WriteAllText("user.json",json)
-
-
-let testtask=
-   async{
-     task.Delay(2000)
-     printfn "hello"
-   }
-
-
-testtask()
-
-
-
 
 
 
