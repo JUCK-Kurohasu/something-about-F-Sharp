@@ -1,0 +1,32 @@
+dotnet add package FSharp.Data --version 6.3.0
+#r "nuget:FSharp.Data"
+
+
+
+Http.RequestString(URL:stirng)
+Http.AsyncRequestString(URL:string)
+->basic http Request
+
+*option
+
+URL:string
+
+?query:string List
+
+?httpMethod:string
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
