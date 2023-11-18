@@ -5,7 +5,7 @@ dotnet add package FSharp.Data --version 6.3.0
 
 Http.RequestString(URL:stirng)
 Http.AsyncRequestString(URL:string)
-->basic http Request
+->httpRequest送信
 
 *option
 
@@ -16,8 +16,31 @@ URL:string
 ?httpMethod:string
 
 
+JsonValue.load(URL:string)
 
 
+
+
+(JsonValue.Load)?**->**属性を選択
+
+
+
+
+
+open FSharp.Data.JsonExtensions が必要
+
+*JsonValue 
+
+.AsArray()->配列に変換
+.AsBoolean()->ブール値に変換
+.AsDateTime()->日時に変換
+.AsDecimal()->10進数に変換
+.AsFloat()->floatに変換
+.AsGuid()->guidに変換
+.AsInteger()->intに変換
+.AsInteger64()->int64に変換
+.AsString()->文字列に変換
+.AsTimeSpan()->タイムスパンに変換
 
 
 
