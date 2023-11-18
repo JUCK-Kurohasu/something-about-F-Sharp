@@ -44,7 +44,7 @@ printfn "%s" str
 //str<-Http.RequestString("https://chainflyer.bitflyer.com/v1/block/000000006a625f06636b8bb6ac7b960a8d03705d1ace08b1a19da3fdcc99ddbd")
 //printfn "%s" str
 
-let data=JsonValue.Load("https://chainflyer.bitflyer.com/v1/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f")
+let data=JsonValue.Load("https://chainflyer.bitflyer.com/v1/block/latest")
 //printfn "%A" ret
 //let J=JsonValue.WriteTo()
 
@@ -65,7 +65,17 @@ let export:block={
     timestamp=(data?timestamp.AsDateTime())
     bits=(data?bits.AsInteger64())|>uint64
     nonce=(data?nonce.AsInteger64())|>uint64
-    txnum=(data?)
+    txnum=(data?txnum.AsInteger64())|>uint64
+    total_fees=(data?total_fees.AsInteger64())|>uint64
+    tx_hashes=[|for i=0 to ((data?tx_hashes.AsArray()).Length-1) do
+    (data?tx_hashes.AsArray()).[i].AsString()|]
+    
 }
 
-printfn "%A" export
+printfn "\n\n\n%A" export
+
+
+
+
+
+
