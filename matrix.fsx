@@ -1,10 +1,8 @@
 open System
 
 
-let multi(a,b)=a*b
 
-
-let matrix(ar1,ar2)=
+let matrix(ar1:int[,],ar2:int[,]):int[,]=
     let mutable ar1num=Array2D.length2 ar1
     let mutable ar2num=Array2D.length1 ar2
     if ar1num<>ar2num then raise (System.ArgumentException("ERROR!"))
@@ -28,16 +26,21 @@ let matrix(ar1,ar2)=
 
 
 
-let hai1=Array2D.init 2 4 (fun x y->x+y)
-let hai2=Array2D.init 4 2 (fun x y->x*y)
-printfn "%A" hai1
-printfn "%A" hai2
-
-let num=matrix(hai1,hai2)
-printfn "\n\n%A" num
 
 
 
+let a1=[|
+    [|2;5|]
+    [|4;7|]
+|]
+
+let a2:int[,]=[|
+    [|1;3|]
+    [|6;9|]
+|]
+
+
+let num=matrix(a1,a2)
 
 
 
